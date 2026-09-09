@@ -41,7 +41,7 @@ const getSeverity = (fatigue_score, fall_detected) => {
     }
 };
 
-// Menentukan jenis alert berdasarkan deteksi jatuh dan skor kelelahan
+// Menentukan jenis peringatan berdasarkan deteksi jatuh dan skor kelelahan
 const getAlertType = (fall_detected, fatigue_score) => {
     if (fall_detected) {
         return "Fall Detection";

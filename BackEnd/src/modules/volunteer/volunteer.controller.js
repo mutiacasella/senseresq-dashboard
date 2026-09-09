@@ -46,7 +46,6 @@ const getAllVolunteers = async (req, res) => {
 const getVolunteerById = async (req, res) => {
     try {
         const { id } = req.params;
-
         const volunteer = await volunteerRepository.getVolunteerById(id);
 
         if (!volunteer) {
@@ -130,7 +129,6 @@ const getDashboardVolunteers = async (req, res) => {
 const updateVolunteer = async (req, res) => {
     try {
         const { id } = req.params;
-
         const volunteer = await volunteerRepository.getVolunteerById(id);
 
         if (!volunteer) {
@@ -161,7 +159,6 @@ const updateVolunteer = async (req, res) => {
 const deleteVolunteer = async (req, res) => {
     try {
         const { id } = req.params;
-
         const volunteer = await volunteerRepository.getVolunteerById(id);
 
         if (!volunteer) {

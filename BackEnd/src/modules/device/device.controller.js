@@ -4,7 +4,6 @@ const deviceRepository = require("./device.repository");
 const createDevice = async (req, res) => {
     try {
         const { device_id } = req.body;
-
         await deviceRepository.createDevice(device_id);
 
         return res.status(201).json({
@@ -47,7 +46,6 @@ const getAllDevices = async (req, res) => {
 const getDeviceById = async (req, res) => {
     try {
         const { id } = req.params;
-
         const device = await deviceRepository.getDeviceById(id);
 
         if (!device) {
@@ -77,7 +75,6 @@ const getDeviceById = async (req, res) => {
 const deleteDevice = async (req, res) => {
     try {
         const { id } = req.params;
-
         const device = await deviceRepository.getDeviceById(id);
 
         if (!device) {
